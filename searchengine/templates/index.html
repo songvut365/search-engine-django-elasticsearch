@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Search Engine{% endblock %}
+
+{% block content %}
+  <div class="home">
+    <h1>Search Engine</h1>
+    <form action="/" method="POST" id="searchForm">
+      {% csrf_token %}
+      {{ form }}
+      <input type="submit" value="ค้นหา" id="submitBtn">
+    </form>
+  </div>
+{% endblock %}
+
+
+

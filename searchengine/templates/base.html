@@ -1,0 +1,106 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+      /*Font*/
+      @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+      
+      * {
+        font-family: 'Prompt', sans-serif;
+      }
+
+      body { 
+        width: 100%;
+        margin: 0;
+        background: #b92b27;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #1565C0, #b92b27);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #1565C0, #b92b27); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      }
+
+      /*Navbar*/
+      #sidebar { 
+        display: flex; 
+        align-items: center; 
+        width: 100%; 
+        background-color: none;
+        color: white;
+      }
+      #sidebar a, h3 { 
+        margin-right: 1rem; 
+        margin-left: 1rem;
+      }
+      #sidebar a:link, a:visited, a:active { color: white; text-decoration: none; }
+      #sidebar a:hover { color: lightgrey; }
+      
+      #content { 
+        text-align: center;
+        color: white;
+      }
+      
+      /*Content*/
+      .home { 
+        padding-top: 8rem; 
+      }
+      .home h1 { font-size: 4rem; color: white; }
+      #searchForm input[type=text] { 
+        border: 1px solid lightgrey;
+        border-radius: 0;
+        width: 500px;
+        font-size: 1.5rem;
+        outline: none;
+        padding: 5px;
+      }
+      #searchForm input[type=text]:hover {
+        border: 1px solid white;
+      }
+
+      #searchForm input[type=submit] {
+        background-color: white;;
+        border: 1px solid lightgrey;
+        width: 100px;
+        font-size: 1.5rem;
+        padding: 5px;
+        border-radius: 0;
+      }
+      #searchForm input[type=submit]:hover {
+        border: 1px solid white;
+        background-color: rgba(0, 0, 0, 0);
+        color: white;
+        cursor: pointer;
+      }
+      
+      /*Footer*/
+      #footer {
+        color: white;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 5px;
+      }
+      #footer p { margin: 0; padding: 0;}
+    </style>
+    <title>{% block title %}Search Engine Site{% endblock %}</title>
+</head>
+
+<body>
+    <div id="sidebar">
+      {% block sidebar %}
+        <h3>Search Engine</h3>
+        <a href="/">Home</a></li>
+      {% endblock %}
+    </div>
+
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <div id="footer">
+      {% block footer %}
+        <p>เว็บไซต์นี้เป็นส่วนหนึ่งของวิชา Information Storage and Web Search</p>
+        <p>© 2021 All rights reserved.</p>
+      {% endblock %}
+    </div>
+</body>
+</html>
