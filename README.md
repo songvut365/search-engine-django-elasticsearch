@@ -1,5 +1,7 @@
 # Search Engine Web Application with Django and Elasticsearch
 
+![screenshot](screenshot.png)
+
 ## Elasticsearch and Kibana Setup (Windows)
 
 ### Dcoker and Docker-compose required
