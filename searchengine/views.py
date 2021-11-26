@@ -3,6 +3,7 @@ from django.shortcuts import render
 
 from .forms import SearchForm
 
+from .document import CovidDocument
 
 # Home page with form
 def index(request):
@@ -25,4 +26,9 @@ def search(request):
         form = SearchForm()
         return HttpResponseRedirect('/')
     else:
-        return render(request, 'result.html', {'question': query})
+        s = CovidDocument.search().query("match", content=query)
+        for hit in s:
+          print(
+            hit.content
+          )
+        return render(request, 'result.html', {'question': query, 'result': s})
