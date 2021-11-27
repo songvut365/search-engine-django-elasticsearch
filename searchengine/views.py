@@ -26,9 +26,12 @@ def search(request):
         form = SearchForm()
         return HttpResponseRedirect('/')
     else:
-        s = CovidDocument.search().query("match", content=query)
-        for hit in s:
-          print(
-            hit.content
-          )
-        return render(request, 'result.html', {'question': query, 'result': s})
+        try:
+          s = CovidDocument.search().query("match", content=query)
+          for hit in s:
+            print(
+              hit.content
+            ) 
+          return render(request, 'result.html', {'question': query, 'result': s})
+        except:
+          return render(request, 'error.html')
