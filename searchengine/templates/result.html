@@ -3,7 +3,14 @@
 {% block title %}Result{% endblock %}
 
 {% block content %}
-  <h1>Result of "{{ question }}"</h1>
+  <h1>ผลการค้นหาของ "{{ question }}"</h1>
+  
+  {% for hit in result %}
+  <div class="result-container">
+    <h2>{{ hit.topic }}</h2>
+    <p>{{ hit.content }}</p>
+  </div>
+  {% endfor %}
 {% endblock %}
 
 

@@ -4,7 +4,7 @@
 <head>
     <style>
       /*Font*/
-      @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap');      
       
       * {
         font-family: 'Prompt', sans-serif;
@@ -71,6 +71,18 @@
         color: white;
         cursor: pointer;
       }
+
+      .result-container {
+        margin: 1rem;
+        padding: 1rem;
+        text-align: left;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: #212121;
+        border-radius: 8px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
       
       /*Footer*/
       #footer {
@@ -90,7 +102,7 @@
     <div id="sidebar">
       {% block sidebar %}
         <h3>Search Engine</h3>
-        <a href="/">Home</a></li>
+        <a href="/">หน้าแรก</a></li>
       {% endblock %}
     </div>
 
