@@ -1,6 +1,9 @@
 # Search Engine Web Application with Django and Elasticsearch
 
-![screenshot](screenshot.png)
+## Screenshot
+
+![screenshot1](screenshot1.png)
+![screenshot2](screenshot2.png)
 
 ## Elasticsearch and Kibana Setup (Windows)
 
