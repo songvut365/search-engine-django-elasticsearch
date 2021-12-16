@@ -8,7 +8,7 @@
   {% for hit in result %}
   <div class="result-container">
     <h2>{{ hit.topic }}</h2>
-    <p>{{ hit.content }}</p>
+    <p>{{ hit.content|safe }}</p>
   </div>
   {% endfor %}
 {% endblock %}
